@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
   <head> 
     
@@ -22,12 +23,15 @@
     </script>
     <style>
       body{
+        margin: 0;
+        width: 100%;
+      }
+      .body-wrapper{
         font-family: 'Helvetica Neue', 'Helvetica', 'arial', 'sans-serif';
         max-width: 900px; 
         margin: 0 auto;
-        width: 80%;
+        width: 80%; 
       }
-
       h1, h2, h3{
         font-weight: normal;
       }
@@ -44,7 +48,7 @@
       h3{
         text-align: left; 
       }
-      header{
+      .header{
         display: block;
         text-align: center; 
         margin: 48px auto 24px;
@@ -146,13 +150,13 @@
   </head>
 
   <body>
-
-  <header>
+  <div class="body-wrapper">
+  <div class="header">
     <h1>Chromify.js</h1>
     <h2><strong>Yo Dawg,</strong> I heard you like to wrap your screenshots in a decorative browser frame</h2>
     <h3>So I created a <strong>jQuery plugin</strong> that wraps your screenshots in a <strong>pure-CSS browser frame</strong>
     so you don't have to mess with photoshop while you wrap your screenshots in a decorative browser frame.</h3>
-  </header>
+  </div>
     <div class="example-wrapper">
       <figure> 
         <div class='arrow'>
@@ -215,6 +219,6 @@
         Remember when you had to do that in photoshop? 
       </p>
     </div>
-
+    </div>
   </body>
 </html>

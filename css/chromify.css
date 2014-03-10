@@ -24,15 +24,6 @@
   clear: both; 
 }
 
-.chromify .chromify-main-bar{
-  display: flex;
-  background-color:  #f1f1f1; 
-  width: 100%;
-  padding: 0.5em; 
-  clear: both; 
-}
-
-
 .chromify-circle-close,
 .chromify-circle-minify,
 .chromify-circle-zoom{
@@ -44,14 +35,17 @@
   box-shadow: inset 1px 2px 5px -2px rgba(0,0,0,0.3);
 }
 .chromify-circle-close{
-  background-image: radial-gradient(100% 100%, #FF6047 0%, #EB4932   50%, #9E2A00  100%);
+  background-color: #EB4932;
+  background-image: radial-gradient(100% 100%, #FF6047 0%, #EB4932 50%, #9E2A00  100%);
   box-shadow: inset 1px 2px 5px -2px #941111;
 }
 .chromify-circle-minify{
+  background-color: #EBC548; 
   background-image: radial-gradient(100% 100%, #FFD240 0%, #EBC548 50%, #E88700   100%);
   box-shadow: inset 1px 2px 3px rgba(245 , 150 , 17 , 1);
 }
 .chromify-circle-zoom{
+  background-color: #97CF73;
   background-image: radial-gradient(100% 100%, #B3D952 0%, #97CF73 50%, #75AD57 100%);
   box-shadow: inset 1px 2px 5px -2px #577A3C ;
 }
@@ -71,11 +65,24 @@
   color: #333;
 }
 
+.chromify .chromify-main-bar{  
+  display: table;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  background-color:  #f1f1f1; 
+  width: 100%;
+  padding: 0.5em; 
+  clear: both; 
+}
+
 .chromify-button-forward, 
 .chromify-button-back{
+  display: table-cell;
   width: 1.2em; 
   margin: 0.8em 1em 0 0; 
   flex: none;
+  -webkit-flex: none;
   position: relative; 
 }
 
@@ -98,32 +105,50 @@
 .chromify-button-back .top-block {
   -webkit-transform-origin: left top; 
   -moz-transform-origin: left top; 
+  -ms-transform-origin: left top; 
   transform-origin: left top; 
   -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  transform: rotate(50deg);
+
 }
 
 .chromify-button-back .bottom-block{
   -webkit-transform-origin: left bottom; 
   -moz-transform-origin: left bottom; 
+  -ms-transform-origin: left bottom; 
   transform-origin: left bottom; 
   -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+  -ms-transform: rotate(-50deg);
+  transform: rotate(-50deg);
 }
 
 .chromify-button-forward .top-block {
   -webkit-transform-origin: right top; 
   -moz-transform-origin: right top; 
+  -ms-transform-origin: right top; 
   transform-origin: right top; 
   -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+  -ms-transform: rotate(-50deg);
+  transform: rotate(-50deg);
 }
 
 .chromify-button-forward .bottom-block{
   -webkit-transform-origin: right bottom; 
   -moz-transform-origin: right bottom; 
+  -ms-transform-origin: right bottom; 
   transform-origin: right bottom; 
   -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  transform: rotate(50deg);
 }
 
 .chromify-button-reload {
+  display: table-cell;
   border-radius: 50%; 
   border: 0.3em solid #CECECE;
   background-color: inherit; 
@@ -147,12 +172,15 @@
   background-color: inherit;
   -webkit-transform: rotate(-50deg);
   -moz-transform: rotate(-50deg);
+  -ms-transform: rotate(-50deg);
   transform: rotate(-50deg);
 }
 
 .chromify-address-bar{
+  display: table-cell;
   background-color: white;  
   flex-grow: 1; 
+  -webkit-flex-grow: 1; 
   border: 1px solid #CECECE; 
   box-shadow: inset 1px 2px 5px -2px rgba(0,0,0,0.7);
   border-radius: 3px; 
@@ -161,6 +189,7 @@
   position: relative;
   height: 2em; 
   text-align: left;
+  vertical-align: middle;
 }
 
 .chromify-address-bar .url-address{
@@ -174,11 +203,11 @@
   vertical-align: middle;
   margin-left: 0.5em;
   margin-right: 0.2em;
-  margin-top: 0.4em;
   background-image: none;
   background-size: scale; 
 }
 .chromify .sandwich-button{
+  display: table-cell;
   width: 2.5em; 
   padding-left: 1em; 
   padding-top: 0.2em; 
