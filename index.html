@@ -1,0 +1,220 @@
+<html>
+  <head> 
+    
+    <title>jquery browser chrome plugin</title>
+    <link rel="stylesheet" href="css/chromify.css"></style>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
+    <script src="js/jquery.chromify.js"></script> 
+    <script> 
+      $(document).ready(function(){
+        $('.chromify-me').chromify();
+        $('.chromify-me-small').chromify({fontSize:10});
+        $('.chromify-me-smaller').chromify({fontSize:6});
+        $('.chromify-me-content').chromify({
+                                            fontSize:12, 
+                                            title: 'Change the title!',
+                                            url: '<-favicon!, customizable url here!', 
+                                            favicon: 'http://www.smaratun.is/wp-content/uploads/facebook.png'
+                                          });
+
+      })
+    </script>
+    <style>
+      body{
+        font-family: 'Helvetica Neue', 'Helvetica', 'arial', 'sans-serif';
+        max-width: 900px; 
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      h1, h2, h3{
+        font-weight: normal;
+      }
+      h1{
+        font-size: 48px;
+        font-weight: 800;
+        text-shadow: 1px 2px 0px #694700, 2px 2px 0px #694700;
+        color: #FDE563;
+      }
+
+      h2{
+
+      }
+      h3{
+        text-align: left; 
+      }
+      header{
+        display: block;
+        text-align: center; 
+        margin: 48px auto 24px;
+        max-width: 800px;
+      }
+      figure{
+        display: inline-block;
+        margin: 0 1em;
+        vertical-align: middle;
+        position: relative;
+        text-align: center;
+      }
+      figcaption{
+        font-weight: bold; 
+        font-size: 12px;
+      }
+      .example-wrapper{
+        position: relative;
+        text-align: center; 
+      }
+      .arrow{
+        text-align: center;
+        background-color: #FFFF5E;
+        margin: 0em -11em;
+        padding: 1em;
+        border-radius: 40px;
+        box-shadow: 0px 1px 7px -3px #000;
+        display: inline-block;
+        position: absolute;
+        top: -20px;
+        left: 220px;
+        z-index: 2;
+      }
+      .arrow-bar{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-color:  #FFFF5E;
+        right: -10px;
+        top: 50%;
+        margin-top: -10px;
+      }
+      .arrow-down{
+        display: none;
+        height: 0;
+        width: 0; 
+        border-left: solid rgba(0, 0, 0, 0);
+        border: 50px solid rgba(0, 0, 0, 0);
+        border-top: 50px solid #FFFF5E;
+        position: absolute;
+        bottom: -110px;
+        margin-left:-50px;
+        left: 50%; 
+      }
+      .arrow-left {
+        display: inline-block;
+        height: 0;
+        width: 0;
+        border-top: 20px solid rgba(0, 0, 0, 0);
+        border-bottom: 20px solid rgba(0, 0, 0, 0);
+        border-left: 20px solid #FFFF5E;
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        margin-top: -20px;
+      }
+      strong{
+        font-weight: bold;
+        color: #B13200;
+
+      }
+      @media (max-width: 836){
+        figure{
+          margin-bottom: 100px;
+        }
+        .arrow{
+          bottom: -55px;
+          top: auto;
+          margin-left: -130px;
+          left: 50%;
+        }
+        .arrow-bar{
+          margin-left:-25px;
+          left: 50%;
+          top: auto;
+          bottom: -10px;
+          width: 50px;
+          height: 10px;
+        }
+        .arrow-down{
+          display: inline-block;
+        }
+        .arrow-left{
+          display: none;
+        }
+      }
+    </style>
+  
+  </head>
+
+  <body>
+
+  <header>
+    <h1>Chromify.js</h1>
+    <h2><strong>Yo Dawg,</strong> I heard you like to wrap your screenshots in a decorative browser frame</h2>
+    <h3>So I created a <strong>jQuery plugin</strong> that wraps your screenshots in a <strong>pure-CSS browser frame</strong>
+    so you don't have to mess with photoshop while you wrap your screenshots in a decorative browser frame.</h3>
+  </header>
+    <div class="example-wrapper">
+      <figure> 
+        <div class='arrow'>
+          <code>$(".chromify-me").chromify();</code>
+          <div class='arrow-bar'></div>
+          <div class='arrow-down'></div>
+          <div class='arrow-left'></div>
+        </div>
+        <img width="300" class="demo-image" src="before.jpg"/>  
+        <figcaption>before</figcaption>
+      </figure>
+
+      <figure>
+        <img width="300" class="chromify-me demo-image" src="after.jpg"/>
+        <figcaption>after</figcaption>
+      </figure>
+    </div>
+
+    <h2>Why use this instead of photoshop?</h2>
+    
+    <p>
+    Let me count the ways. 
+    </p>
+    
+    <h1>1. It stretches</h1>
+    
+    <div class="chromify-me">
+        <p style="padding: 1em;">Which means it automatically gets shorter or longer depending on it's content. 
+        This text is purposefully long so you can see the frame scaling when you resize your browser window. I guess you can call it 'responsive', but seriously folkes, it's just a percentage width. Nothing fancy. </p>
+    </div>
+    
+    <h1>2. It zooms</h1>
+    
+    <div class="chromify-me">
+      <p style="padding: 1em;">
+      It uses EM based sizing so all you have to do is <br> 
+      modify the base font-size, and it zooms accordingly.</p>
+    </div>
+    
+    <div class="chromify-me-small">
+      <p style="padding: 1em;font-size: 12px;">
+        This frame has a font-size of 10px, <br>
+        instead of the default 12px. <br/>
+
+      </p>
+    </div>
+    
+    <div class="chromify-me-smaller">
+      <p style="padding: 1em;font-size: 12px;line-height: 1.2em;">
+        This is  6px frame <br>
+        Still lookin' good! 
+      </p>
+    </div>
+
+    <h1>3. Dynamic Content</h1>
+    
+    <div class="chromify-me-content">
+      <p style="padding: 1em;font-size: 12px;line-height: 1.2em;">
+        You can change the tab title and the address-bar title. </br>
+        Remember when you had to do that in photoshop? 
+      </p>
+    </div>
+
+  </body>
+</html>

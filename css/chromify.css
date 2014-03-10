@@ -1,0 +1,197 @@
+.chromify *{
+  box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  max-width: 100%; 
+}
+
+.chromify{
+  background-color:white; 
+  border-radius: 5px; 
+  box-shadow: 0px 4px 35px -10px rgba(0,0,0,0.7); 
+  border: 1px solid lightGrey; 
+  font-family: 'Lucida Grande', 'helvetica Neue', 'helvetica', 'arial', 'sans-serif';
+  font-size: 12px; 
+  line-height: 1em; 
+  display: inline-block;
+}
+
+.chromify .chromify-top-bar{
+  background-color: lightGrey;
+  float: left;
+  width: 100%;
+  padding: 0.5em; 
+  padding-bottom: 0; 
+  clear: both; 
+}
+
+.chromify .chromify-main-bar{
+  display: flex;
+  background-color:  #f1f1f1; 
+  width: 100%;
+  padding: 0.5em; 
+  clear: both; 
+}
+
+
+.chromify-circle-close,
+.chromify-circle-minify,
+.chromify-circle-zoom{
+  width: 1em; 
+  height: 1em;
+  margin:  0.2em 0.2em 0 0.5em; 
+  float: left; 
+  border-radius: 50%; 
+  box-shadow: inset 1px 2px 5px -2px rgba(0,0,0,0.3);
+}
+.chromify-circle-close{
+  background-image: radial-gradient(100% 100%, #FF6047 0%, #EB4932   50%, #9E2A00  100%);
+  box-shadow: inset 1px 2px 5px -2px #941111;
+}
+.chromify-circle-minify{
+  background-image: radial-gradient(100% 100%, #FFD240 0%, #EBC548 50%, #E88700   100%);
+  box-shadow: inset 1px 2px 3px rgba(245 , 150 , 17 , 1);
+}
+.chromify-circle-zoom{
+  background-image: radial-gradient(100% 100%, #B3D952 0%, #97CF73 50%, #75AD57 100%);
+  box-shadow: inset 1px 2px 5px -2px #577A3C ;
+}
+
+.chromify-tab{
+  font-size: 0.8em; 
+  border-bottom: 2em solid #F1F1F1;
+  border-left: 1em solid rgba(0, 0, 0, 0);
+  border-right: 1em solid rgba(0, 0, 0, 0);
+  height: 0;
+  float: left;
+  margin-left: 0.5em;
+  padding: 0 0.5em;
+  margin-top: 0.5em; 
+  line-height: 2em;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.2);
+  color: #333;
+}
+
+.chromify-button-forward, 
+.chromify-button-back{
+  width: 1.2em; 
+  margin: 0.8em 1em 0 0; 
+  flex: none;
+  position: relative; 
+}
+
+.chromify-button-forward, 
+.chromify-button-back{
+  position: relative;
+}
+
+.chromify .top-block, 
+.chromify .bottom-block, 
+.chromify .straight-block{
+  background-color: #CECECE;  
+  width: 1em;
+  height: 0.3em;
+  border-radius: 0.2em;
+  position: absolute;
+}
+
+
+.chromify-button-back .top-block {
+  -webkit-transform-origin: left top; 
+  -moz-transform-origin: left top; 
+  transform-origin: left top; 
+  -webkit-transform: rotate(50deg);
+}
+
+.chromify-button-back .bottom-block{
+  -webkit-transform-origin: left bottom; 
+  -moz-transform-origin: left bottom; 
+  transform-origin: left bottom; 
+  -webkit-transform: rotate(-50deg);
+}
+
+.chromify-button-forward .top-block {
+  -webkit-transform-origin: right top; 
+  -moz-transform-origin: right top; 
+  transform-origin: right top; 
+  -webkit-transform: rotate(-50deg);
+}
+
+.chromify-button-forward .bottom-block{
+  -webkit-transform-origin: right bottom; 
+  -moz-transform-origin: right bottom; 
+  transform-origin: right bottom; 
+  -webkit-transform: rotate(50deg);
+}
+
+.chromify-button-reload {
+  border-radius: 50%; 
+  border: 0.3em solid #CECECE;
+  background-color: inherit; 
+  position: relative; 
+  margin: 0.8em 1em 0 0; 
+  margin-top:0.3em;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.chromify-button-reload .chromify-arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 0.4em solid rgba(0, 0, 0, 0);
+  border-right: 0.4em solid rgba(0, 0, 0, 0);
+  border-top: 0.6em solid #CECECE;
+  position: absolute;
+  right: -0.51em;
+  top: -1px;
+  padding: 0px;
+  background-color: inherit;
+  -webkit-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+  transform: rotate(-50deg);
+}
+
+.chromify-address-bar{
+  background-color: white;  
+  flex-grow: 1; 
+  border: 1px solid #CECECE; 
+  box-shadow: inset 1px 2px 5px -2px rgba(0,0,0,0.7);
+  border-radius: 3px; 
+  line-height: 1.8em;
+  overflow: hidden;
+  position: relative;
+  height: 2em; 
+  text-align: left;
+}
+
+.chromify-address-bar .url-address{
+  position: absolute;
+}
+.chromify-address-bar .favicon{
+  width: 1.2em;
+  height: 1.2em;
+  background-color: lightGrey;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  margin-right: 0.2em;
+  margin-top: 0.4em;
+  background-image: none;
+  background-size: scale; 
+}
+.chromify .sandwich-button{
+  width: 2.5em; 
+  padding-left: 1em; 
+  padding-top: 0.2em; 
+}
+
+.chromify .sandwich-line{
+  height: 0.3em; 
+  width: 100%; 
+  background-color: #CECECE; 
+  margin-bottom: 0.25em; 
+  border-radius: 0.25em; 
+}
+
+.chromify .sandwich-line:last-child{
+  margin-bottom: 0;
+}
